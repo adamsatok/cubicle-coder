@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style/stylesheet.css" />
+</head>
+<body onload="initialize();">
+	<script type="text/javascript" src="JavaScript/mainscript.js"></script>
+	<script type="text/javascript" src="JavaScript/graphics.js"></script>
+	<script type="text/javascript" src="JavaScript/startUp.js"></script>
+	<script type="text/javascript" src="JavaScript/menus.js"></script>
+	<script type="text/javascript" src="JavaScript/multipliers.js"></script>
+
+
+	<div class="div1">
+
+		<div class=header> 	
+
+			<button class="codeButton" onclick="codeClick()">Code</button>
+
+			<div class = "centreText"> 
+				<div class ="headerText"> Bits: </div>
+				<div class = "headerText" id ="currency" > 0 </div><br>
+				<div class ="headerText2"> Bits per second: </div>
+				<div class = "headerText2" id ="currencyPerSecond"> 0 </div><br>
+				<div class = "headerText2" id ="currencyPerClick" style = "visibility:hidden"> 0 </div>
+			</div>
+
+		</div>	
+
+		<div class ="tempGraphics">
+
+			<div class = "cellTower">
+				<img src=graphics/upgrades/cellTower.png id = "graphics8" alt="cellTower" style="width:60%;height:60%;visibility:hidden;">
+			</div>
+
+			<img src="graphics/defualt/background.png" alt="Background Image" style="width:640px;height:400px;">
+
+			<div class = "autoScripts2">
+				<img src=graphics/upgrades/autoScripts.gif alt="autoScripts2" style="width:140px;height:140px; visibility:visible;">
+			</div>
+
+			<div class = "computerUpgrades">
+				<img src=graphics/upgrades/computerUpgrades.png id="graphics3" alt="Computer Upgrades" style="width:250px;height:150px; visibility:hidden;">
+			</div>
+
+			<div class = "penguin">
+				<img src=graphics/upgrades/penguin.gif id="graphics10" alt="penguin" style="width:25%;height:25%; visibility:hidden;">
+			</div>
+
+			<div class = "programmer">
+				<img src=graphics/defualt/programmer-slow.gif id =  "programmer1" alt="Programmer" style="width:144px;height:267px;">
+			</div>
+
+			<div class = "programmer">
+				<img src=graphics/defualt/programmer.gif id =  "programmer2" alt="Programmer" style="width:144px;height:267px;visibility:visible;">
+			</div>
+
+			<div class = "programmer" >
+				<img src=graphics/upgrades/programmerMetalHands-slow.gif id="graphics7a" alt="Programmer" style="width:144px;height:267px;visibility:hidden;">
+			</div>
+
+			<div class = "programmer" id =  "programmerMetalHands">
+				<img src=graphics/upgrades/programmerMetalHands.gif id="graphics7b" alt="Programmer" style="width:144px;height:267px;visibility:hidden;">
+			</div>
+
+			<div class = "autoScripts">
+				<img src=graphics/upgrades/autoScripts.gif id="graphics4" alt="autoScripts" style="width:260px;height:140px; visibility:hidden;">
+			</div>
+
+			<div class = "codingTutorials">
+				<img src=graphics/upgrades/codingTutorials.png id="graphics2" alt="codingTutorials" style="width: 25%;height:25%; visibility:hidden;">
+			</div>
+			<div class = "preformanceEnhancer">
+				<img src=graphics/upgrades/preformanceEnhancer.png id="graphics9" alt="preformanceEnhancer" style="width: 12.3px;height:22.5px; visibility:hidden;">
+			</div>
+
+			<div class = "frontWall">
+				<img src=graphics/defualt/frontWall.png alt="frontWall" style="width:150px;height:395px;">
+			</div>
+
+			<div class = "beerFridge">
+				<img src=graphics/upgrades/beerFridge.png id = "graphics6" alt="beerFridge" style="width:25%;height:25%;visibility:hidden;">
+			</div>
+
+			<div class = "server">
+				<img src=graphics/upgrades/server.png alt="server" id="graphics5" style="width:90%;height:80%; visibility:hidden;">
+			</div>
+
+			<div id = "graphics1"> </div>
+
+		</div>
+
+		<button class = "pauseButton" id="pauseButton" onclick="pauseGame(1)"> || </button>
+		<button class = "pauseButton" id="resetButton" onclick="reset()" style="left:11%;"> R </button>
+		<button class = "pauseButton" id="godModeButton" onclick="godMode()" style="left:6%;"> G </button>
+
+		<div class ="sidebar">
+
+			<img src = graphics/defualt/border.png alt="border" style="width:100%;height: 100%;z-index: 2;">
+			<div class = "upgradesBar">   
+				<button class="upgradeBarButton" id = "multiplier1" onclick="buyMultiplier(1)" onmouseover = "showMultiplier(1)" onmouseout = "stopShowMultiplier(1)">
+					<div class = "mutiplierPopUp" id = "multiplierPopUp1">  </div>
+
+				</button>
+				<button class="upgradeBarButton"  id = "multiplier2" onclick="buyMultiplier(2)" onmouseover = "showMultiplier(2)" onmouseout = "stopShowMultiplier(2)">
+					<div class = "mutiplierPopUp" id = "multiplierPopUp2">  </div>
+
+
+				</button>
+				<button class="upgradeBarButton"  id = multiplier3 onclick="buyMultiplier(3)" onmouseover = "showMultiplier(3)" onmouseout = "stopShowMultiplier(3)">
+					<div class = "mutiplierPopUp" id = "multiplierPopUp3">  </div>
+
+				</button>
+				<button class="upgradeBarButton"  id = multiplier4 onclick="buyMultiplier(4)" onmouseover = "showMultiplier(4)" onmouseout = "stopShowMultiplier(4)">
+					<div class = "mutiplierPopUp" id = "multiplierPopUp4">  </div>
+
+				</button>
+
+			</div>
+
+			<button class = "upgradeButton" id="buttonUpgrade1" onclick="autoUpgrade(1)" style="top:20%;" onmouseover = "showMultiplier(5)" onmouseout = "stopShowMultiplier(5)"> 
+			Typing Speed: 
+			<div class = "upgradeButtonText" id="upgradeCount1" > 0 </div><br><div class = "upgradeButtonText" id="upgrade1"> 10 </div>
+			<div class = "mutiplierPopUp" id = "multiplierPopUp5">  Description Template </div>
+			</button>
+
+			<button class = "upgradeButton" id="buttonUpgrade2" onclick="autoUpgrade(2)" style="top:28%;"> 
+			Coding Tutorials: 
+			<div class = "upgradeButtonText" id="upgradeCount2"> 0 </div><br>
+			<div class = "upgradeButtonText" id="upgrade2"> 25 </div></button>
+
+			<button class = "upgradeButton" id="buttonUpgrade3" onclick="autoUpgrade(3)" style="top:36%; visibility:hidden;"> Computer Upgrades: <div class = "upgradeButtonText" id="upgradeCount3"> 0 </div><br><div class = "upgradeButtonText" id="upgrade3"> 200 </div></button>
+
+			<button class = "upgradeButton" id="buttonUpgrade4" onclick="autoUpgrade(4)" style="top:44%;visibility:hidden;"> Automatic Scripts: <div class = "upgradeButtonText" id="upgradeCount4"> 0 </div><br><div class = "upgradeButtonText" id="upgrade4"> 1000 </div></button>
+
+			<button class = "upgradeButton" id="buttonUpgrade5" onclick="autoUpgrade(5)" style="top:52%;visibility:hidden;"> Server: <div class = "upgradeButtonText" id="upgradeCount5"> 0 </div><br><div class = "upgradeButtonText" id="upgrade5"> 8000 </div></button>
+
+			<button class = "upgradeButton" id="buttonUpgrade6" onclick="autoUpgrade(6)" style="top:60%;visibility:hidden;"> Beer Fridge: <div class = "upgradeButtonText" id="upgradeCount6"> 0 </div><br><div class = "upgradeButtonText" id="upgrade6"> 50000 </div></button>
+
+			<button class = "upgradeButton" id="buttonUpgrade7" onclick="autoUpgrade(7)" style="top:68%;visibility:hidden;"> Robotic Hands: <div class = "upgradeButtonText" id="upgradeCount7"> 0 </div><br><div class = "upgradeButtonText" id="upgrade7"> 300000 </div></button>
+
+			<button class = "upgradeButton" id="buttonUpgrade8" onclick="autoUpgrade(8)" style="top:76%;visibility:hidden;"> Out Sourced Employee: <div class = "upgradeButtonText" id="upgradeCount8"> 0 </div><br><div class = "upgradeButtonText" id="upgrade8"> 1500000 </div></button>
+
+			<button class = "upgradeButton" id="buttonUpgrade9" onclick="autoUpgrade(9)" style="top:84%;visibility:hidden;"> Performance Enhancer: <div class = "upgradeButtonText" id="upgradeCount9"> 0 </div> <br><div class = "upgradeButtonText" id="upgrade9"> 10000000 </div></button>
+
+			<button class = "upgradeButton" id="buttonUpgrade10" onclick="autoUpgrade(10)" style="top:92%;visibility:hidden;"> Penguin of Inspiration: <div class = "upgradeButtonText" id="upgradeCount10"> 0 </div><br><div class = "upgradeButtonText" id="upgrade10"> 200000000 </div></button>
+
+		</div> 
+
+		<div id="buttonUpgrade12"></div>
+
+		<div class = "pauseBackdrop" id = "pauseBackdrop" style="visibility:hidden;"></div>
+		<div class = "pauseMenu" id = "pauseMenu" style="visibility:hidden;""> 
+			<button class = "exitButton" id="pauseButton" onclick="pauseGame(2)"> X </button>
+			<button class = "upgradeButton" id="buttonUpgrade12" onclick="pauseGame(2)" style="top:30%;"> Achievements </button>
+			<button class = "upgradeButton" id="buttonUpgrade12" onclick="statsPage(1)" style="top:45%;"> Stats </button>
+			<button class = "upgradeButton" id="buttonUpgrade12" onclick="pauseGame(2)" style="top:60%;"> Settings </button>
+			<button class = "upgradeButton" id="buttonUpgrade12" onclick="pauseGame(2)" style="top:75%;"> FAQ </button>
+		</div>
+
+		<div class = "pauseMenu" id = "statsPage" style="visibility: hidden;" > Stats <button class = "exitButton" id="pauseButton2" onclick="statsPage(2)"> X </button> <br><div class = "rightHeaderText" id = "statsPageText" style="font-size: 16px;">  </div> </div>
+
+
+		<div class = "titleScreen" id = "titleScreen" >
+			<div class = "titleText" >Cubicle<br>Coder </div>
+			<button class = "upgradeButton" id="buttonUpgrade1" onclick="startGame()" style="top:80%;"> Start Coding </button>
+		</div>
+	</div>
+
+	
+</body>
+</html>

@@ -1,0 +1,366 @@
+.div1 {
+	margin: auto;
+	position:absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	width: 960px;
+	height: 640px;
+	border: 4px solid;
+}
+
+.sidebar {
+	position:absolute;
+	top: 50%; left: 100%;
+	transform: translate(-100%,-50%);
+	width: 300px;
+	height: 100%;
+	background-color: #3399FF;
+}
+.tempGraphics{
+	position: absolute;
+	bottom:0;
+	left:0;
+	margin-left: 10px;
+	margin-bottom: 40px;
+}
+
+.frontLeftWall{
+	position: absolute;
+	bottom:0;
+	left:0;
+}
+
+.programmer{
+	position: absolute;
+	bottom:0;
+	left:0;
+	margin-left: 220px;
+	margin-bottom: 30px;
+}
+.computerUpgrades{
+	position: absolute;
+	bottom:0;
+	left:0;
+	margin-left: 205px;
+	margin-bottom: 205px;
+}
+
+.codingTutorials{
+	position: absolute;
+	bottom:0;
+	left:0;
+	margin-left:430px;
+	margin-bottom:160px;
+
+}
+
+.centreText{
+	position:absolute;
+	width:100%;
+	margin: 0 auto;
+	overflow: hidden;
+	text-align:center;
+	bottom:0;
+}
+
+.preformanceEnhancer{
+	position: absolute;
+	bottom:0;
+	left:0;
+	margin-left:380px;
+	margin-bottom:185px;
+
+}
+
+.autoScripts{
+	position: absolute;
+	bottom:0;
+	left:0;
+	margin-left: 200px;
+	margin-bottom: 215px;
+}
+
+.autoScripts2{
+	position: absolute;
+	bottom:0;
+	left:0;
+	margin-left: 273px;
+	margin-bottom: 140px;
+}
+
+.server{
+	position: absolute;
+	bottom:0;
+	left:0;
+	margin-left: 500px;
+	margin-bottom: -20px;
+}
+
+.frontWall{
+	position: absolute;
+	bottom:0;
+	left:0;
+	margin-left: 475px;
+	margin-bottom: -16px;
+}
+
+.header{
+	width:660px;
+	height: 200px;
+	position: absolute;
+	top:0;
+	left:0;
+	//background-color:#3399FF;
+}
+.headerText{
+	text-align:center;
+	font-family: "Courier";
+	font-size: 22px;
+	color: black;
+	display:inline-block;
+
+}
+
+.headerText2{
+	text-align:center;
+	font-family: "Courier";
+	font-size: 16px;
+	color: black;
+	display:inline-block;
+
+}
+
+.beerFridge{
+	position: absolute;
+	bottom:0;
+	left:0;
+	margin-left: -10px;
+	margin-bottom: 18px;
+}
+
+.cellTower{
+	position: absolute;
+	bottom:0;
+	right:0;
+	margin-right: -85px;
+	margin-bottom: 30px;
+}
+
+.penguin{
+	position: absolute;
+	bottom:0;
+	left:0;
+	margin-left: -18px;
+	margin-bottom: 472px;
+
+}
+
+.mutiplierPopUp{
+	width:200px;
+	height:60px;
+	background-color:#3399FF;
+	border-radius: 10px;
+	margin-top: -60px;
+	margin-left:-190px;
+	border-color:black;
+	border-width: 2px;
+	border-style: solid;
+	opacity:0.9;
+	pointer-events: none;
+	visibility:hidden;
+}
+
+.upgradesBar{
+	position: absolute;
+	z-index:0;
+	width:100%;
+	margin-top:35px;
+	height:46px;
+	left: 0px;
+	top: 0px;
+	z-index: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.upgradeBarButton{
+	margin: 8px;
+	position:relative;
+	width: 50px;
+	height: 45px;
+	background-color: orange;
+	color: white;
+	border-radius: 10px;
+	outline:0;
+	font-family: "Courier";
+	font-size: 12px;
+	visibility: visible;
+}
+
+.codeButton{
+	position:absolute;
+	width: 480px;
+	height: 80px;
+	top: 20%; left: 50%;
+	margin-left:-240px;
+	//background: url('cyber.gif') no-repeat center;
+	background-color:orange;
+	color: white;
+	text-align: center;
+	display: inline-block;
+	border-radius: 50px;
+	font-family: "Courier";
+	font-size: 50px;
+	outline:0;
+}
+.upgradeButton{
+	position:absolute;
+	width: 250px;
+	height: 40px;
+	top: 25%; left: 50%;
+	margin:-30px 0 0 -125px;
+	background-color: orange;
+	color: white;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 25px;
+	font-family: "Courier";
+	font-size: 14px;
+	outline:0;
+}
+.pauseButton{
+	position:absolute;
+	width: 40px; height: 40px;
+	top: 92%; left: 1%;
+	background-color: orange;
+	color: white;
+	text-align: center;
+	font-size: 16px;
+	border-radius: 25px;
+	font-family: "Courier";
+	font-size: 14px;
+	font-weight: 900;
+	outline:0;
+}
+.exitButton{
+	position:absolute;
+	width: 30px; height: 30px;
+	top: -12px; left: -12px;
+	background-color: orange;
+	color: white;
+	text-align: center;
+	font-size: 16px;
+	border-radius: 25px;
+	font-family: "Courier";
+	font-size: 14px;
+	font-weight: 900;
+	outline:0;
+}
+.upgradeButtonText{
+	color: white;
+	text-align: center;
+	display: inline-block;
+	font-family: "Courier";
+	font-size: 14px;
+}
+.rightHeader{
+	width: 60%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	right:0;
+}
+.rightHeaderText{
+	position:absolute;
+	display: inline-block;
+	font-family: "Courier";
+	font-size: 24px;
+	color: white;
+}
+.pauseMenu{
+	position:absolute;
+	margin: auto;
+	background-color: #3399FF;
+	width: 260px;
+	border-radius:15px;
+	border: solid 4px orange;
+	height: 300px;
+	top: 0; left: 0; bottom: 0; right: 0;
+	padding: 1%;
+	font-family: "Courier";
+	font-size: 24px;
+	color: white;
+}
+
+.pauseBackdrop{
+	height:100%;
+	width:100%;
+	background-color:grey;
+	opacity:0.4;
+
+}
+
+.titleScreen {
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	height:100%;
+	width:100%;
+	visibility: hidden;
+	background-color: #3399FF;;
+}
+
+.titleText {
+	margin-top: 50px;
+	font-family: "Courier";
+	font-size: 120px;
+	text-align: center;
+	color:white;
+}
+.titleSubText {
+	margin: auto;
+	position:absolute;
+	top: 55%; left: 0; bottom: 0; right: 0;
+	font-family: "Courier";
+	font-size: 40px;
+	text-align: center;
+	color:white;
+
+}
+
+.userNameInput {
+	margin: auto;
+	position:absolute;
+	top: 37%; left: 0; bottom: 0; right: 0;
+	width: 200px; height:40px;
+	font-family: "Courier";
+	font-size: 20px;
+	text-align: center;
+}
+
+.userNameText{
+	font-family: "Courier";
+	font-size: 20px;
+	text-align: center;
+	color:white;
+	position:absolute;
+	top: 20%; left: -12%; bottom: 0; right: 0;
+	visibility: visible;
+}
+
+.logo{
+	margin-top:20px;
+	height:110px;
+	width:550px;
+	margin-right:auto;
+	margin-left:auto;
+
+}
+
+br1 {
+	display: block;
+	margin: 23px 0;
+}
+br2 {
+	display: block;
+	margin: 5px 0;
+}
