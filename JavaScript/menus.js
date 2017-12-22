@@ -31,10 +31,14 @@
 			startTime();
 			playTime();
 			document.getElementById("pauseBackdrop").style.visibility = "visible";
-			document.getElementById("statsPageText").innerHTML = "Here are some FAQs <br> What if?";
+			document.getElementById("stats").innerHTML = "Contact";
+			document.getElementById("statsPageText").innerHTML = "Contact the developer with any questions at adamsatok@gmail.com";
 			document.getElementById("statsPage").style.visibility = "visible";
 			document.getElementById("statsPage").style.height = "300px";
 
+		}
+		else if(x == 3){
+			reset()
 		}
 
 		else{
@@ -45,7 +49,6 @@
 
 	function reset(){
 		localStorage.resetVal = 1;
-		
 	}
 
 	function godMode(){

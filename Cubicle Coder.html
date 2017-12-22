@@ -96,8 +96,6 @@
 		</div>
 
 		<button class = "pauseButton" id="pauseButton" onclick="pauseGame(1);"> || </button>
-		<button class = "pauseButton" id="resetButton" onclick="reset()" style="left:11%;"> R </button>
-		<button class = "pauseButton" id="godModeButton" onclick="godMode()" style="left:6%;"> G </button>
 
 		<div class ="sidebar">
 
@@ -177,11 +175,11 @@
 			<div class = "pauseMenu" id = "pauseMenu" style="visibility:hidden;""> 
 				<button class = "exitButton" id="pauseButton" onclick="pauseGame(2)"> X </button>
 				<button class = "upgradeButton" id="buttonUpgrade12" onclick="statsPage(1)" style="top:35%;"> Stats </button>
-				<button class = "upgradeButton" id="buttonUpgrade12" onclick="statsPage(2)" style="top:65%;"> FAQ </button>
-				<button class = "upgradeButton" id="buttonUpgrade12" onclick="pauseGame(2)" style="top:50%;"> Reset Game </button>
+				<button class = "upgradeButton" id="buttonUpgrade12" onclick="statsPage(2)" style="top:65%;"> Contact Developer </button>
+				<button class = "upgradeButton" id="buttonUpgrade12" onclick="statsPage(3)" style="top:50%;"> Reset Game Save Data</button>
 			</div>
 
-			<div class = "pauseMenu" id = "statsPage" style="visibility: hidden;" > Stats <button class = "exitButton" id="pauseButton2" onclick="statsPage(0)"> X </button> <br><div class = "rightHeaderText" id = "statsPageText" style="font-size: 16px;">  </div> </div>
+			<div class = "pauseMenu" id = "statsPage" style="visibility: hidden;" > <p id = "stats"> Stats </p> <button class = "exitButton" id="pauseButton2" onclick="statsPage(0)"> X </button> <br><div class = "rightHeaderText" id = "statsPageText" style="font-size: 16px;">  </div> </div>
 
 
 			<div class = "titleScreen" id = "titleScreen">
