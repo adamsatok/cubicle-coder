@@ -1,23 +1,77 @@
-var multPrice = [100,200,400,1000,10000,100000,1000000,1000000,2000000,50000,40000,30000,600000,700000,30000,20,10,6000,7000,3400000];
+var multPrice = [100, 200, 1000, 1200, 1500, 6000, 8000, 10000, 12000, 35000, 42000, 
+50000, 80000, 80000, 150000, 300000, 300000, 400000, 400000, 500000, 800000, 1000000,
+1500000, 2000000, 2000000, 2000000, 3000000, 5000000, 5200000, 8000000, 10000000, 
+12000000, 12000000, 12000000, 12000000, 30000000, 31000000, 42000000, 50000000, 60000000, 
+70000000, 80000000, 90000000, 240000000, 300000000, 400000000, 450000000, 600000000, 3400000000];
+var upgradeOrder = [1, 2, 1, 3, 2, 3, 4, 1, 2, 3, 4, 1, 2, 5, 3, 1, 4, 2, 5, 6, 3, 1, 4, 2, 5, 7, 6, 1, 3, 4, 5, 2, 6, 7, 8, 1, 4, 2, 5, 6, 9, 8, 7, 8, 9, 7, 9, 10, 10];
+var upgradeBought = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 var descriptions = ["Double your typing speed!", 
+"Double the efficiency of your Coding Tutorials!", 
+"Double your typing speed!", 
+"Double the efficiency of your Computer Upgrades!", 
 "Double the efficiency of your Coding Tutorials!", 
 "Double the efficiency of your Computer Upgrades!", 
 "Double the efficiency of your Automatic Scripts!", 
+"Double your typing speed!", 
+"Double the efficiency of your Coding Tutorials!", 
+"Double the efficiency of your Computer Upgrades!", 
+"Double the efficiency of your Automatic Scripts!", 
+"Double your typing speed!", 
+"Double the efficiency of your Coding Tutorials!", 
 "Double the efficiency of your Server!", 
-"Double the efficiency of your Beer Fridge!"];
-var upgradeOrder = [1,2,3,4,5,6,7,8,9,1,2,3,4,2,1,7,3,4,9,10];
-var upgradeBought = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+"Double the efficiency of your Computer Upgrades!", 
+"Double your typing speed!", 
+"Double the efficiency of your Automatic Scripts!", 
+"Double the efficiency of your Coding Tutorials!", 
+"Double the efficiency of your Server!", 
+"Double the efficiency of your Beer Fridge! Yum", 
+"Double the efficiency of your Computer Upgrades!", 
+"Double your typing speed!", 
+"Double the efficiency of your Automatic Scripts!", 
+"Double the efficiency of your Coding Tutorials!", 
+"Double the efficiency of your Server!", 
+"Double the efficiency of your Robotic Hands", 
+"Double the efficiency of your Beer Fridge! Yum", 
+"Double your typing speed!", 
+"Double the efficiency of your Computer Upgrades!", 
+"Double the efficiency of your Automatic Scripts!", 
+"Double the efficiency of your Server!", 
+"Double the efficiency of your Coding Tutorials!", 
+"Double the efficiency of your Beer Fridge! Yum", 
+"Double the efficiency of your Robotic Hands", 
+"Double the efficiency of your Out Sourced Employee", 
+"Double your typing speed!", 
+"Double the efficiency of your Automatic Scripts!", 
+"Double the efficiency of your Coding Tutorials!", 
+"Double the efficiency of your Server!", 
+"Double the efficiency of your Beer Fridge! Yum", 
+"Double the efficiency of your Performance Enhancer", 
+"Double the efficiency of your Out Sourced Employee", 
+"Double the efficiency of your Robotic Hands", 
+"Double the efficiency of your Out Sourced Employee", 
+"Double the efficiency of your Performance Enhancer", 
+"Double the efficiency of your Robotic Hands", 
+"Double the efficiency of your Performance Enhancer",
+"Double the efficiency of your Penguin of Inspiration", 
+"Double the efficiency of your Penguin of Inspiration"];
+
+
 var data = [];
 var dataPos = [];
+var unlockedData = [];
 
 function unlockMulitpliers(){
 	data = [];
+	unlockedData = [];
 	var j = 1;
 	var length = upgradeOrder.length;
 	for(i=0; i<length; i++){
 		if(upgradeBought[i]==0&&upgradeCount[upgradeOrder[i]-1]>0&&totalCurrency>multPrice[i]/10){
 			data[j]=upgradeOrder[i];
 			dataPos[j]=i;
+			if(totalCurrency>multPrice[i]){
+				unlockedData[j]=1;
+			}
 			j++;
 		}
 		if(j>5){
@@ -26,7 +80,12 @@ function unlockMulitpliers(){
 	}
 	for(i=1;i<5;i++){
 		if(data[i]){
-			document.getElementById("multiplier" + i).style.background= "orange url('graphics/logos/logo" + data[i] + ".png') no-repeat center";
+			if(unlockedData[i]==1){
+				document.getElementById("multiplier" + i).style.background= "orange url('graphics/logos/logo" + data[i] + ".png') no-repeat center";
+			}
+			else{
+				document.getElementById("multiplier" + i).style.background= "grey url('graphics/logos/logo" + data[i] + ".png') no-repeat center";
+			}
 			document.getElementById("multiplier" + i).style.visibility= "visible";
 			document.getElementById("multiplierPopUp"+i).innerHTML = "Price: "+multPrice[dataPos[i]] +"<br>"+ descriptions[dataPos[i]];
 		}
@@ -50,9 +109,6 @@ function buyMultiplier(x){
 	}
 }
 
-function multWrapper(){
-	multiplierSaveState("101010111101010100");
-}
 
 function multiplierSaveState(x){
 	var length=x.length;
@@ -66,6 +122,12 @@ function multiplierSaveState(x){
 }
 
 function showMultiplier(x){
+	if(x==5){
+		document.getElementById("multiplierPopUp5").innerHTML= Math.round(100*clickAmount)/100+" bits per click";
+	}
+	if(x>5){
+		document.getElementById("multiplierPopUp"+x).innerHTML= Math.round(100*autoPerUpgrade[x-5])/100+" bits per second";
+	}
 	document.getElementById("multiplierPopUp"+x).style.visibility="visible";
 }
 

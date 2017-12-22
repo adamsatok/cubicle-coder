@@ -46,7 +46,7 @@
 			totalClicks = 0;
 			lastTime = 0;
 			totalTimeAway=0;
-			multiplierSaveData="00000000000000000000";
+			multiplierSaveData="0000000000000000000000000000000000000000000000000";
 			for (i = 0; i < 11; i++){
 				upgradeCount[0]=0;
 			}

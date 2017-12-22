@@ -1,26 +1,42 @@
 	function pauseGame(x){
 		if(x==1){
+			gamePause=true;
 			document.getElementById("pauseBackdrop").style.visibility = "visible";
 			document.getElementById("pauseMenu").style.visibility = "visible";
 		}
 		if(x==2){
+			gamePause=false;
 			document.getElementById("pauseBackdrop").style.visibility = "hidden";
 			document.getElementById("pauseMenu").style.visibility = "hidden";
 		}
 	}
 	
 	function statsPage(x){
+		console.log(x);
 		if(x == 1){
+			console.log("hit1");
 			pauseGame(2);
 			startTime();
 			playTime();
 			document.getElementById("pauseBackdrop").style.visibility = "visible";
 			document.getElementById("statsPageText").innerHTML = "Total Bits: " + 
 			allTimeCurrency + "<br> Greatest Bits: "+ greatestCurrency+ "<br> Total Clicks: " 
-			+ totalClicks+ "<br> Bits from clicks: "+ allTimeClickCurrency +"<br> Bits from upgrades: "
-			+allTimeAutoCurrency +"<br> Time Played: " +timePlayed+ "<br> Time since start: " + timeSinceStart;
+			+ totalClicks+ "<br> Bits from clicks: "+ allTimeClickCurrency +"<br> Bits from automatic upgrades: "
+			+ allTimeAutoCurrency +"<br> Time Played: " +timePlayed+ "<br> Time since start: " + timeSinceStart;
 			document.getElementById("statsPage").style.visibility = "visible";
+			document.getElementById("statsPage").style.height = "300px";
 		}
+		else if(x == 2){
+			pauseGame(2);
+			startTime();
+			playTime();
+			document.getElementById("pauseBackdrop").style.visibility = "visible";
+			document.getElementById("statsPageText").innerHTML = "Here are some FAQs <br> What if?";
+			document.getElementById("statsPage").style.visibility = "visible";
+			document.getElementById("statsPage").style.height = "300px";
+
+		}
+
 		else{
 			document.getElementById("pauseBackdrop").style.visibility = "hidden";
 			document.getElementById("statsPage").style.visibility = "hidden";
